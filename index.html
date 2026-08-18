@@ -251,6 +251,17 @@
             font-weight: 800;
         }
 
+        /* Ligne décorative aux teintes du logo */
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+            margin: 15px auto 0 auto;
+            border-radius: 2px;
+        }
+
         .section-subtitle {
             color: var(--text-muted);
             font-size: 1.1rem;
@@ -259,7 +270,7 @@
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 30px;
         }
 
@@ -303,14 +314,13 @@
         }
 
         .card p {
-            color: var(--text-main);
             font-size: 0.98rem;
             margin: 0;
             color: #475569;
         }
 
-        /* Section Contact & Formulaire */
-        .contact-bg {
+        /* Section Contact & Layout Formulaire */
+        .contact-section-bg {
             background-color: var(--white);
             border-top: 1px solid #e2e8f0;
         }
@@ -371,103 +381,252 @@
             color: var(--primary-color);
         }
 
-        /* Formulaire */
+        /* Style Formulaire */
         .contact-form {
             background-color: var(--bg-light);
             padding: 40px;
-border-radius: 16px;
-border: 1px solid #e2e8f0;
-}
+            border-radius: 16px;
+            border: 1px solid #e2e8f0;
+        }
 
-.form-group {
-margin-bottom: 20px;
-}
+        .form-group {
+            margin-bottom: 20px;
+        }
 
-.form-group label {
-display: block;
-margin-bottom: 8px;
-font-weight: 600;
-font-size: 0.9rem;
-color: var(--secondary-color);
-}
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--secondary-color);
+        }
 
-.form-control {
-width: 100%;
-padding: 12px 16px;
-border: 1px solid #cbd5e1;
-background-color: var(--white);
-border-radius: 8px;
-font-size: 1rem;
-color: var(--secondary-color);
-transition: border-color 0.2s;
-}
+        .form-control {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid #cbd5e1;
+            background-color: var(--white);
+            border-radius: 8px;
+            font-size: 1rem;
+            color: var(--secondary-color);
+            transition: border-color 0.2s;
+        }
 
-.form-control:focus {
-outline: none;
-border-color: var(--primary-color);
-box-shadow: 0 0 0 3px rgba(12, 98, 206, 0.1);
-}
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(12, 98, 206, 0.1);
+        }
 
-.btn-submit {
-width: 100%;
-background-color: var(--secondary-color);
-color: var(--white);
-border: none;
-padding: 14px;
-font-size: 1rem;
-font-weight: 600;
-border-radius: 8px;
-cursor: pointer;
-transition: background 0.2s;
-}
+        .btn-submit {
+            width: 100%;
+            background-color: var(--secondary-color);
+            color: var(--white);
+            border: none;
+            padding: 14px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
 
-.btn-submit:hover {
-background-color: var(--primary-color);
-}
+        .btn-submit:hover {
+            background-color: var(--primary-color);
+        }
 
-/* Pied de page */
-footer {
-background-color: var(--secondary-color);
-color: #94a3b8;
-padding: 60px 20px 30px 20px;
-font-size: 0.95rem;
-border-top: 4px solid var(--accent-color);
-}
+        /* Pied de page */
+        footer {
+            background-color: var(--secondary-color);
+            color: #94a3b8;
+            padding: 60px 20px 30px 20px;
+            font-size: 0.95rem;
+            border-top: 4px solid var(--accent-color);
+        }
 
-.footer-grid {
-max-width: 1200px;
-margin: 0 auto;
-display: flex;
-justify-content: space-between;
-align-items: center;
-flex-wrap: wrap;
-gap: 20px;
-border-bottom: 1px solid #334155;
-padding-bottom: 40px;
-margin-bottom: 30px;
-}
+        .footer-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            border-bottom: 1px solid #334155;
+            padding-bottom: 40px;
+            margin-bottom: 30px;
+        }
 
-.footer-logo {
-font-size: 1.3rem;
-font-weight: 800;
-color: var(--white);
-}
+        .footer-logo {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: var(--white);
+        }
 
-.footer-links a {
-color: #94a3b8;
-text-decoration: none;
-margin-left: 20px;
-}
+        .footer-links a {
+            color: #94a3b8;
+            text-decoration: none;
+            margin-left: 20px;
+        }
 
-.footer-links a:hover {
-color: var(--white);
-}
+        .footer-links a:hover {
+            color: var(--white);
+        }
 
-.copyright {
-text-align: center;
-margin: 0;
-font-size: 0.88rem;
-color: #64748b;
-}
+        .copyright {
+            text-align: center;
+            margin: 0;
+            font-size: 0.88rem;
+            color: #64748b;
+        }
+    </style>
+</head>
+<body>
 
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo-container">
+                <img src="logo.png" alt="Logo IPS-2TBAT" class="logo-img" onerror="this.style.display='none'">
+                <span class="logo-text">IPS-2TBAT</span>
+            </a>
+            <nav class="nav-links">
+                <a href="#expertises">Expertises</a>
+                <a href="#propos">À propos</a>
+                <a href="#contact" class="nav-cta">Obtenir un devis</a>
+            </nav>
+        </div>
+    </header>
 
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Bâtisseur d'Infrastructures & Partenaire de votre Transition Digitale</h1>
+            <p>IPS-2TBAT conjugue ingénierie du bâtiment, puissance financière, commerce stratégique et technologies numériques pour bâtir l'avenir de votre entreprise.</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary">Lancer un projet</a>
+                <a href="#expertises" class="btn btn-secondary">Découvrir nos solutions</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats-section" id="propos">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <h3>5+</h3>
+                <p>Secteurs d'Expertise</p>
+            </div>
+            <div class="stat-item">
+                <h3>100%</h3>
+                <p>Conformité Technologique & BTP</p>
+            </div>
+            <div class="stat-item">
+                <h3>Abidjan</h3>
+                <p>Ancrage Local & National</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding" id="expertises">
+        <div class="section-header">
+            <h2 class="section-title">Nos Domaines d'Intervention</h2>
+            <p class="section-subtitle">Un guichet unique de services d'élite pour répondre aux défis complexes des entreprises modernes.</p>
+        </div>
+        
+        <div class="services-grid">
+            
+            <div class="card">
+                <div class="card-icon">💻</div>
+                <h3>Développement Web & Solutions Digitales</h3>
+                <p>Conception d'applications sur-mesure, de plateformes e-commerce robustes et de systèmes d'information intégrés pour accélérer la productivité et la transformation technologique de vos équipes.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">📦</div>
+                <h3>Distribution Commerciale & Courtage</h3>
+                <p>Négociation à haut niveau, optimisation de la chaîne logistique et de l'approvisionnement en Côte d'Ivoire. Nous connectons efficacement l'offre de gros aux marchés de consommation régionaux.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">📊</div>
+                <h3>Finance & Audit</h3>
+                <p>Conseil stratégique en investissement, structuration financière de projets d'envergure et ingénierie fiscale pour sécuriser, optimiser et accroître de manière pérenne vos capitaux d'entreprise.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🏢</div>
+                <h3>Gestion & Actifs Immobiliers</h3>
+                <p>Valorisation de patrimoines immobiliers, investissement dans le foncier stratégique et transactions commerciales. Nous vous guidons à chaque étape pour maximiser le rendement de vos actifs immobiliers.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🏗️</div>
+                <h3>BTP & Travaux Publics</h3>
+                <p>Maîtrise d'œuvre complète, conduite de chantiers industriels ou résidentiels, et ingénierie de pointe. Nous construisons dans le respect absolu des délais, de la sécurité et des standards environnementaux.</p>
+            </div>
+
+        </div>
+    </section>
+
+        <section class="section-padding contact-layout">
+            
+            <div class="contact-meta">
+                <h2>Travaillons Ensemble</h2>
+                <p>Vous avez un défi à relever ou une infrastructure à bâtir ? Contactez notre cabinet ou remplissez le formulaire pour une étude personnalisée de votre dossier.</p>
+                
+                <div class="info-block">
+                    <div class="info-icon">📞</div>
+                    <div class="info-content">
+                        <h4>Téléphone Professionnel</h4>
+                        <a href="tel:+2250749737933">07 49 73 79 33</a>
+                    </div>
+                </div>
+
+                <div class="info-block">
+                    <div class="info-icon">📍</div>
+                    <div class="info-content">
+                        <h4>Siège Social</h4>
+                        <p>Gbolouville, Abidjan, Côte d'Ivoire</p>
+                    </div>
+                </div>
+            </div>
+
+            <form class="contact-form" onsubmit="event.preventDefault(); alert('Merci pour votre message ! L'équipe d'IPS-2TBAT vous recontactera sous 24 heures.');">
+                <div class="form-group">
+                    <label for="name">Nom Complet / Raison Sociale</label>
+                    <input type="text" id="name" class="form-control" placeholder="Ex: Jean Koffi ou Entreprise SA" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Adresse Email</label>
+                    <input type="email" id="email" class="form-control" placeholder="Ex: contact@votreentreprise.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="sector">Secteur concerné</label>
+                    <select id="sector" class="form-control">
+                        <option>Développement Web & Solutions Digitales</option>
+                        <option>Distribution Commerciale</option>
+                        <option>Finance</option>
+                        <option>Immobilier</option>
+                        <option>BTP / Construction</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Description de votre besoin</label>
+                    <textarea id="message" class="form-control" rows="4" placeholder="Décrivez succinctement votre projet ou votre question..." required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Envoyer ma demande d'étude</button>
+            </form>
+
+        </section>
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-logo">IPS-2TBAT</div>
+            <div class="footer-links">
+                <a href="#expertises">Expertises</a>
+                <a href="#propos">À propos</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2026 by IPS-2TBAT. Tous droits réservés. Entreprise individuel multisectoriel d'ingénierie et de solutions.</p>
+    </footer>
+
+</body>
+</html>
